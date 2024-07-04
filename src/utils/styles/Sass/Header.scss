@@ -1,0 +1,28 @@
+nav {
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    gap: 57px;
+    margin: 0;
+  }
+  li {
+    list-style: none;
+    font-size: 24px;
+  }
+  li:nth-of-type(1) {
+    flex-grow: 1;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+    ul {
+      gap: 26px;
+    }
+    li {
+      font-size: 12px;
+    }
+  }
+}
