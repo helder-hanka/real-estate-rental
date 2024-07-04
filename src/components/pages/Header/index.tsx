@@ -14,6 +14,7 @@ const Header: React.FC = () => {
     mediaQueryList.addEventListener("change", listener);
     return () => mediaQueryList.removeEventListener("change", listener);
   }, [matches]);
+
   return (
     <header>
       <nav>
