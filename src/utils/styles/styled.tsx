@@ -1,10 +1,13 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { colors } from "../colors";
 
-const StyldeLink = styled(Link)`
+const StyldeLink = styled(NavLink)`
   text-decoration: none;
-  ${(props) => `color: ${colors.black}`}
+  color: ${colors.black};
+  &.active {
+    text-decoration: underline;
+  }
 `;
 
 // eslint-disable-next-line import/no-anonymous-default-export
