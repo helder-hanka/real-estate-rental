@@ -24,6 +24,11 @@ const Header: React.FC = () => {
               <KasaText
                 width={matches ? "145" : "211"}
                 height={matches ? "46.88" : "68"}
+                pathFillOne="#FF6060"
+                pathFillTwo="#FF6060"
+                pathFillThree="#FF6060"
+                pathFilFour="#FF6060"
+                pathFillFive="#FF6060"
               />
             </styled.StyldeLink>
           </li>
@@ -31,7 +36,7 @@ const Header: React.FC = () => {
             <styled.StyldeLink to={"/"}>Accueil</styled.StyldeLink>
           </li>
           <li>
-            <styled.StyldeLink to={"/about"}>A Propos</styled.StyldeLink>
+            <styled.StyldeLink to={"/a-propos"}>A Propos</styled.StyldeLink>
           </li>
         </ul>
       </nav>
