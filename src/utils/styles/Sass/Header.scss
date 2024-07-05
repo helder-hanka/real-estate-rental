@@ -1,4 +1,5 @@
 nav {
+  padding: 45px 100px 0 100px;
   ul {
     display: flex;
     justify-content: center;
@@ -18,6 +19,7 @@ nav {
 
 @media screen and (max-width: 600px) {
   nav {
+    padding: 20px 20px 0 20px;
     ul {
       gap: 26px;
     }
