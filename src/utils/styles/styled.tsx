@@ -83,7 +83,7 @@ const StyledSection = styled.section`
     * {
       border-radius: 10px;
     }
-    margin: 27px 20px 32px 20px;
+    margin: 27px 20px 22px 20px;
     figure figcaption {
       font-size: 24px;
     }
@@ -104,6 +104,49 @@ const StyledSection = styled.section`
     color: ${colors.white};
   }
 `;
+
+const StyledFigure = styled.figure`
+  width: 340px;
+  height: 340px;
+  position: relative;
+  margin: 0;
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  figcaption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: ${colors.white};
+    font-weight: 700;
+  }
+  @media (max-width: ${size.mobile}) {
+    width: 335px;
+    height: 225px;
+  }
+`;
+
+const StyledArticle = styled.article`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 60px 0;
+  margin: 50px 100px 43px 100px;
+  padding-top: 56px;
+  padding-bottom: 43px;
+  background-color: #f6f6f6;
+  border-radius: 25px;
+  @media (max-width: ${size.mobile}) {
+    margin: 27px 20px 0 20px;
+    gap: 20px;
+    padding-top: 0;
+    padding-bottom: 27px;
+    background-color: ${colors.white};
+  }
+`;
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
   StyldeLink,
@@ -112,4 +155,6 @@ export default {
   styledDivContainer,
   styledSpan,
   StyledSection,
+  StyledFigure,
+  StyledArticle,
 };
