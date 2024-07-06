@@ -1,10 +1,16 @@
-import React from "react";
+import React, { Fragment } from "react";
+import images from "../../../utils/images/la_mere_la_montagne.jpeg";
+import ModalImg from "../../ModalImg";
 
 const Home = () => {
   return (
-    <div>
-      <h1>Home page</h1>
-    </div>
+    <>
+      <ModalImg
+        src={images}
+        alt="la mere et la montagne"
+        text="Chez vous, partout et ailleurs"
+      />
+    </>
   );
 };
 

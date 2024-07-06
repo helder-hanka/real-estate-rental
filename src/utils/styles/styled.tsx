@@ -64,6 +64,46 @@ const styledSpan = styled.span`
   }
 `;
 
+const StyledSection = styled.section`
+  margin: 50px 100px 43px 100px;
+  background-color: black;
+  height: 223px;
+  border-radius: 25px;
+  figure {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  @media (max-width: ${size.mobile}) {
+    height: 111px;
+    * {
+      border-radius: 10px;
+    }
+    margin: 27px 20px 32px 20px;
+    figure figcaption {
+      font-size: 24px;
+    }
+  }
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    text-align: center;
+    border-radius: 25px;
+    opacity: 0.4;
+  }
+  figcaption {
+    position: absolute;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    color: ${colors.white};
+  }
+`;
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
   StyldeLink,
@@ -71,4 +111,5 @@ export default {
   StyledCercle,
   styledDivContainer,
   styledSpan,
+  StyledSection,
 };
