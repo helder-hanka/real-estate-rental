@@ -1,0 +1,10 @@
+$sizeMobile: "600px";
+
+.accomodationSheetContainer {
+  margin: 50px 100px 43px 100px;
+}
+@media screen and (max-width: $sizeMobile) {
+  .accomodationSheetContainer {
+    margin: 27px 20px 0 20px;
+  }
+}
