@@ -5,7 +5,7 @@ interface Host {
   picture: string;
 }
 
-interface Property {
+export interface Property {
   id: string;
   title: string;
   cover: string;
