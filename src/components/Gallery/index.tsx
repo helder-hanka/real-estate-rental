@@ -2,6 +2,7 @@ import useFetch from "../../utils/hooks";
 import Figure from "../Figure";
 import styled from "../../utils/styles/styled";
 import { Fragment } from "react/jsx-runtime";
+import { NavLink } from "react-router-dom";
 
 const Gallery: React.FC = () => {
   const { properties, isLoading, error } = useFetch("/Data/index.json");
@@ -17,12 +18,14 @@ const Gallery: React.FC = () => {
       ) : (
         properties.map((data) => (
           <Fragment key={data.id}>
-            <Figure
-              key={data.id}
-              src={data.pictures[0]}
-              alt={data.title}
-              text={data.location}
-            />
+            <NavLink to={`/fiche-logement/${data.id}`}>
+              <Figure
+                key={data.id}
+                src={data.pictures[0]}
+                alt={data.title}
+                text={data.location}
+              />
+            </NavLink>
           </Fragment>
         ))
       )}
