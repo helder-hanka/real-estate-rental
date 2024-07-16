@@ -1,0 +1,21 @@
+.aboutContainer {
+  padding-right: 210px;
+  padding-left: 210px;
+
+  article {
+    padding-bottom: 30px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: "600px") {
+  .aboutContainer {
+    padding-right: 1.219rem;
+    padding-left: 1.219rem;
+
+    article {
+      padding-bottom: 30px;
+      width: 100%;
+    }
+  }
+}
