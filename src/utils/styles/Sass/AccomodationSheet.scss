@@ -88,19 +88,19 @@ $grayColor: #f6f6f673;
     font-size: 18px;
   }
   // Description
-  p,
-  ul {
-    padding: 1.25rem;
-    margin: 0;
-    font-size: 1.125rem;
-    background-color: $grayColor;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-  }
+  // p,
+  // ul {
+  //   padding: 1.25rem;
+  //   margin: 0;
+  //   font-size: 1.125rem;
+  //   background-color: $grayColor;
+  //   border-bottom-left-radius: 5px;
+  //   border-bottom-right-radius: 5px;
+  // }
   // Équipement
-  ul {
-    list-style: none;
-  }
+  // ul {
+  //   list-style: none;
+  // }
   // Vectors
   .vectorDown {
     animation: rotate-up 0.3s forwards;
