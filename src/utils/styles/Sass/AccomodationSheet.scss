@@ -68,8 +68,8 @@ $grayColor: #f6f6f673;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  // flex-grow: 1;
   width: 50%;
+  // height: 0;
   button {
     background-color: $RedColor;
     display: flex;
@@ -90,6 +90,7 @@ $grayColor: #f6f6f673;
   // Description
   p,
   ul {
+    display: none;
     padding: 1.25rem;
     margin: 0;
     font-size: 1.125rem;
@@ -97,6 +98,9 @@ $grayColor: #f6f6f673;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
   }
+  // p {
+  //   transition: height 2s;
+  // }
   // Équipement
   ul {
     list-style: none;
@@ -108,13 +112,20 @@ $grayColor: #f6f6f673;
   .vectorUp {
     animation: rotate-down 0.3s forwards;
   }
-  .slide-in-y-down {
-    animation: slide-in-y-down 0.3s ease-in-out forwards;
-    transition: background-color 0.3s ease-in-out;
+  .slide-in-y-open {
+    // animation: slide-in-y-down 0.3s ease-in-out forwards;
+    // transition: background-color 0.3s ease-in-out;
+    // transition-timing-function: ease;
+    display: block;
+    // transition-timing-function: ease;
+    // transition: height 2s;
   }
-  .slide-in-y-up {
-    animation: slide-in-y-up 0.3s ease-in-out forwards;
-    transition: background-color 0.3s ease-in-out;
+  .slide-in-y-close {
+    // display: none;
+    // transition-timing-function: ease;
+    height: 0;
+    // animation: slide-in-y-up 0.3s ease-in-out forwards;
+    // transition: background-color 0.3s ease-in-out;
   }
 }
 //Profile
