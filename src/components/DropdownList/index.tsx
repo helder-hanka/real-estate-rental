@@ -1,6 +1,7 @@
 import React from "react";
 import BtnDropdown from "../BtnDropdown";
 import VectorUp from "../Svg/VectorUp";
+import "../../utils/styles/Sass/DropdownList.scss";
 
 interface Props {
   children: React.ReactNode;
@@ -23,7 +24,7 @@ const DropdownList: React.FC<Props> = ({
           <VectorUp width="24" height="14" />
         </div>
       </BtnDropdown>
-      {children}
+      <ul className={isOpen ? "displayText" : ""}>{children}</ul>
     </article>
   );
 };
