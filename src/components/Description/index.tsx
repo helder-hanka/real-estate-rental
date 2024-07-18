@@ -9,9 +9,7 @@ interface Props {
 const Description: React.FC<Props> = ({ text, isOpen, handleClick }) => {
   return (
     <DropdownList isOpen={isOpen} handleClick={handleClick} text="Description">
-      {isOpen && (
-        <p className={isOpen ? "slide-in-y-down" : "slide-in-y-down"}>{text}</p>
-      )}
+      <li>{text}</li>
     </DropdownList>
   );
 };
