@@ -38,7 +38,6 @@ const About: React.FC = () => {
     setIsOpen((prev) => ({ ...prev, secutity: !prev.secutity }));
   };
 
-  console.log(isOpen);
   return (
     <>
       <ModalImg src={kalenEmley} alt="image de montagne et la riviére" />
