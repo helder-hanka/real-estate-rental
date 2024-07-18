@@ -63,12 +63,10 @@ $grayColor: #f6f6f673;
   margin: 0;
   display: flex;
   flex-direction: column;
-  // background-color: $grayColor;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  // flex-grow: 1;
   width: 50%;
   button {
     background-color: $RedColor;
@@ -87,35 +85,14 @@ $grayColor: #f6f6f673;
     margin: 0;
     font-size: 18px;
   }
-  // Description
-  // p,
-  // ul {
-  //   padding: 1.25rem;
-  //   margin: 0;
-  //   font-size: 1.125rem;
-  //   background-color: $grayColor;
-  //   border-bottom-left-radius: 5px;
-  //   border-bottom-right-radius: 5px;
-  // }
-  // Équipement
-  // ul {
-  //   list-style: none;
-  // }
+
   // Vectors
-  // .vectorDown {
-  //   animation: rotate-up 0.3s forwards;
-  // }
-  // .vectorUp {
-  //   animation: rotate-down 0.3s forwards;
-  // }
-  // .slide-in-y-down {
-  //   animation: slide-in-y-down 0.3s ease-in-out forwards;
-  //   transition: background-color 0.3s ease-in-out;
-  // }
-  // .slide-in-y-up {
-  //   animation: slide-in-y-up 0.3s ease-in-out forwards;
-  //   transition: background-color 0.3s ease-in-out;
-  // }
+  .vectorDown {
+    animation: rotate-up 0.3s forwards;
+  }
+  .vectorUp {
+    animation: rotate-down 0.3s forwards;
+  }
 }
 //Profile
 .figureContainer {
