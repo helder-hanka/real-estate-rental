@@ -72,9 +72,7 @@ const AccomodationSheet = () => {
               name={accomodationSheet?.host.name}
               picture={accomodationSheet?.host.picture}
             />
-            {/* <div> */}
             <Rating rating={accomodationSheet?.rating} />
-            {/* </div> */}
           </div>
         </article>
         <article className="articleContainerTwo">
