@@ -3,15 +3,14 @@ import styled from "../../utils/styles/styled";
 
 interface Props {
   src: string;
-  alt: string;
-  text: string;
+  title: string;
 }
 
-const Figure: React.FC<Props> = ({ src, alt, text }) => {
+const Figure: React.FC<Props> = ({ src, title }) => {
   return (
     <styled.StyledFigure>
-      <img src={src} alt={alt} />
-      <figcaption>{text}</figcaption>
+      <img src={src} alt={title} />
+      <figcaption>{title}</figcaption>
     </styled.StyledFigure>
   );
 };

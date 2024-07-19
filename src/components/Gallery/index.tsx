@@ -1,4 +1,4 @@
-import useFetch from "../../utils/hooks";
+import useFetch from "../../utils/hooks/useFetch";
 import Figure from "../Figure";
 import styled from "../../utils/styles/styled";
 import { Fragment } from "react/jsx-runtime";
@@ -19,12 +19,7 @@ const Gallery: React.FC = () => {
         properties.map((data) => (
           <Fragment key={data.id}>
             <NavLink to={`/fiche-logement/${data.id}`}>
-              <Figure
-                key={data.id}
-                src={data.pictures[0]}
-                alt={data.title}
-                text={data.location}
-              />
+              <Figure key={data.id} src={data.cover} title={data.title} />
             </NavLink>
           </Fragment>
         ))

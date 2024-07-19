@@ -1,19 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "../../../utils/styles/Sass/Header.scss";
 import KasaText from "../../Svg/KasaText";
 import styled from "../../../utils/styles/styled";
+import useMediaquery from "../../../utils/hooks/useMediaquery";
 
 const Header: React.FC = () => {
-  const [matches, setMatch] = useState<boolean>(
-    window.matchMedia("(max-width:600px)").matches
-  );
-
-  useEffect(() => {
-    const mediaQueryList = window.matchMedia("(max-width:600px)");
-    const listener = (e: MediaQueryListEvent) => setMatch(e.matches);
-    mediaQueryList.addEventListener("change", listener);
-    return () => mediaQueryList.removeEventListener("change", listener);
-  }, [matches]);
+  const match = useMediaquery("(max-width:600px)");
 
   return (
     <header>
@@ -22,8 +14,8 @@ const Header: React.FC = () => {
           <li>
             <styled.StyldeLink to={"/"}>
               <KasaText
-                width={matches ? "145" : "211"}
-                height={matches ? "46.88" : "68"}
+                width={match ? "145" : "211"}
+                height={match ? "46.88" : "68"}
                 pathFillOne="#FF6060"
                 pathFillTwo="#FF6060"
                 pathFillThree="#FF6060"

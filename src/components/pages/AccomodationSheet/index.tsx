@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Property } from "../../../utils/hooks";
-import useFetch from "../../../utils/hooks";
+import { Property } from "../../../utils/hooks/useFetch";
+import useFetch from "../../../utils/hooks/useFetch";
 import Carousel from "../../Carousel";
 import "../../../utils/styles/Sass/AccomodationSheet.scss";
 import Equipment from "../../Equipment";
@@ -9,6 +9,7 @@ import Tag from "../../Tag";
 import Description from "../../Description";
 import Rating from "../../Rating";
 import Profile from "../../Profile";
+import Loader from "../../Loader";
 
 interface Dropdown {
   description: boolean;
@@ -49,7 +50,7 @@ const AccomodationSheet = () => {
     }));
   };
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <Loader />;
   if (error) return <div>Error: {error}</div>;
   if (!accomodationSheet) return <div>No property found.</div>;
   return (
@@ -62,8 +63,8 @@ const AccomodationSheet = () => {
         <article className="articleContainerOne">
           <div>
             <article className="title">
-              <h1>Cozy loft on the Canal Saint-Martin</h1>
-              <p>Paris, Île-de-France</p>
+              <h1>{accomodationSheet?.title}</h1>
+              <p>{accomodationSheet?.location}</p>
             </article>
             <Tag items={accomodationSheet?.tags} />
           </div>
