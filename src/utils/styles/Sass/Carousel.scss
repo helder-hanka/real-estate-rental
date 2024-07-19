@@ -1,13 +1,13 @@
 .carousel {
+  max-width: 1240px;
   position: relative;
-  width: 100%;
+  margin: auto;
   height: 415px;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 25px;
-
   &__items {
     display: flex;
     transition: transform 0.5s ease-in-out;
@@ -35,9 +35,8 @@
 }
 
 .carousel-item {
-  // min-width: 100%;
   width: 100%;
-  opacity: 0;
+  box-sizing: border-box;
   transition: opacity 0.5s ease-in-out;
 
   &--visible {
@@ -60,59 +59,8 @@
   }
 }
 
-// src/Carousel.scss
-
-// $primary-color: #333;
-// $control-bg-color: rgba(0, 0, 0, 0.5);
-// $control-color: #fff;
-
-// .carousel {
-//   position: relative;
-//   width: 100%;
-//   overflow: hidden;
-
-//   &__container {
-//     display: flex;
-//     transition: transform 0.5s ease-in-out;
-//   }
-
-//   &__slide {
-//     min-width: 100%;
-//     box-sizing: border-box;
-//     padding: 20px;
-//     text-align: center;
-//     background-color: $primary-color;
-//     color: $control-color;
-//   }
-
-//   &__control {
-//     position: absolute;
-//     top: 50%;
-//     transform: translateY(-50%);
-//     background-color: $control-bg-color;
-//     border: none;
-//     color: $control-color;
-//     padding: 10px;
-//     cursor: pointer;
-//     z-index: 10;
-
-//     &--prev {
-//       left: 10px;
-//     }
-
-//     &--next {
-//       right: 10px;
-//     }
-//   }
-// }
-
-// // Responsive adjustments
-// @media (max-width: 768px) {
-//   .carousel__slide {
-//     padding: 10px;
-//   }
-
-//   .carousel__control {
-//     padding: 5px;
-//   }
-// }
+@media screen and (max-width: 600px) {
+  .carousel {
+    height: 255px;
+  }
+}
