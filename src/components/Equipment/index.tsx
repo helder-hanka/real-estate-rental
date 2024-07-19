@@ -9,13 +9,11 @@ interface Props {
 const Equipment: React.FC<Props> = ({ items, isOpen, handleClick }) => {
   return (
     <DropdownList isOpen={isOpen} text="Équipements" handleClick={handleClick}>
-      {/* {isOpen && ( */}
-      <ul className={isOpen ? "slide-in-y-open" : "slide-in-y-close"}>
+      <>
         {items.map((item, index) => (
           <li key={index}>{item}</li>
         ))}
-      </ul>
-      {/* )} */}
+      </>
     </DropdownList>
   );
 };

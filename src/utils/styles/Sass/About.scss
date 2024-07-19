@@ -1,0 +1,21 @@
+.aboutContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.875rem;
+  padding-right: 13.125rem;
+  padding-left: 13.125rem;
+  padding-bottom: 1.875rem;
+
+  article {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: "600px") {
+  .aboutContainer {
+    padding-right: 1.219rem;
+    padding-left: 1.219rem;
+    gap: 1.25rem;
+  }
+}

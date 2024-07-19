@@ -4,7 +4,7 @@ import styled from "../../utils/styles/styled";
 interface Props {
   src: string;
   alt: string;
-  text: string;
+  text?: string;
 }
 
 const ModalImg: React.FC<Props> = ({ src, alt, text }) => {
@@ -12,7 +12,7 @@ const ModalImg: React.FC<Props> = ({ src, alt, text }) => {
     <styled.StyledSection>
       <figure>
         <img src={src} alt={alt} />
-        <figcaption>{text}</figcaption>
+        {text && <figcaption>{text}</figcaption>}
       </figure>
     </styled.StyledSection>
   );
