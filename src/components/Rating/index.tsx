@@ -34,7 +34,6 @@ const Rating: React.FC<Props> = ({ rating }) => {
     return arrRating;
   };
 
-  console.log("Rating", rating, "Arr", countRating(rating));
   return (
     <StarRating
       width={matches ? "98px" : "196px"}
