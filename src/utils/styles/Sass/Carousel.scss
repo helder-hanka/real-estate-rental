@@ -1,13 +1,13 @@
 .carousel {
+  max-width: 1240px;
   position: relative;
-  width: 100%;
+  margin: auto;
   height: 415px;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 25px;
-
   &__items {
     display: flex;
     transition: transform 0.5s ease-in-out;
@@ -35,9 +35,8 @@
 }
 
 .carousel-item {
-  // min-width: 100%;
   width: 100%;
-  opacity: 0;
+  box-sizing: border-box;
   transition: opacity 0.5s ease-in-out;
 
   &--visible {
@@ -57,5 +56,11 @@
     padding: 10px;
     font-weight: 500;
     font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .carousel {
+    height: 255px;
   }
 }

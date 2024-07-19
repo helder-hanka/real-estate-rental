@@ -13,9 +13,8 @@ const Carousel: React.FC<Item> = ({ items, title }) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === items.length - 1 ? 0 : prevIndex + 1
-    );
+    const newIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1;
+    setCurrentIndex(newIndex);
   };
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
@@ -38,9 +37,9 @@ const Carousel: React.FC<Item> = ({ items, title }) => {
           </Fragment>
         ))}
       </div>
-      <div className="carousel-item__caption">
+      <caption className="carousel-item__caption">
         {currentIndex + 1}/{items.length}
-      </div>
+      </caption>
       <button
         onClick={nextSlide}
         className="carousel__button carousel__button--left"
