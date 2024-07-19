@@ -25,7 +25,7 @@ const Carousel: React.FC<Item> = ({ items, title }) => {
   };
 
   return (
-    <div className="carousel">
+    <figure className="carousel">
       <div className="carousel__items">
         {items?.map((item, index) => (
           <Fragment key={index}>
@@ -37,9 +37,9 @@ const Carousel: React.FC<Item> = ({ items, title }) => {
           </Fragment>
         ))}
       </div>
-      <caption className="carousel-item__caption">
+      <figcaption className="carousel-item__caption">
         {currentIndex + 1}/{items.length}
-      </caption>
+      </figcaption>
       <button
         onClick={nextSlide}
         className="carousel__button carousel__button--left"
@@ -58,7 +58,7 @@ const Carousel: React.FC<Item> = ({ items, title }) => {
           height={match ? "19.8px" : "79.2px"}
         />
       </button>
-    </div>
+    </figure>
   );
 };
 
