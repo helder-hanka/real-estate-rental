@@ -19,12 +19,7 @@ const Gallery: React.FC = () => {
         properties.map((data) => (
           <Fragment key={data.id}>
             <NavLink to={`/fiche-logement/${data.id}`}>
-              <Figure
-                key={data.id}
-                src={data.pictures[0]}
-                alt={data.title}
-                text={data.location}
-              />
+              <Figure key={data.id} src={data.pictures[0]} title={data.title} />
             </NavLink>
           </Fragment>
         ))

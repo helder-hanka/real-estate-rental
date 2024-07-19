@@ -63,8 +63,8 @@ const AccomodationSheet = () => {
         <article className="articleContainerOne">
           <div>
             <article className="title">
-              <h1>Cozy loft on the Canal Saint-Martin</h1>
-              <p>Paris, Île-de-France</p>
+              <h1>{accomodationSheet?.title}</h1>
+              <p>{accomodationSheet?.location}</p>
             </article>
             <Tag items={accomodationSheet?.tags} />
           </div>

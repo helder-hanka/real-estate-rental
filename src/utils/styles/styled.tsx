@@ -120,7 +120,7 @@ const StyledFigure = styled.figure`
   figcaption {
     position: absolute;
     bottom: 20px;
-    left: 20px;
+    padding: 0 20px 0 20px;
     color: ${colors.white};
     font-weight: 700;
     font-size: 18px;
