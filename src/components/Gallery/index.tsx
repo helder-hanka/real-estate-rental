@@ -1,4 +1,4 @@
-import useFetch from "../../utils/hooks";
+import useFetch from "../../utils/hooks/useFetch";
 import Figure from "../Figure";
 import styled from "../../utils/styles/styled";
 import { Fragment } from "react/jsx-runtime";

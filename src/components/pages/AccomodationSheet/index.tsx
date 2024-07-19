@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Property } from "../../../utils/hooks";
-import useFetch from "../../../utils/hooks";
+import { Property } from "../../../utils/hooks/useFetch";
+import useFetch from "../../../utils/hooks/useFetch";
 import Carousel from "../../Carousel";
 import "../../../utils/styles/Sass/AccomodationSheet.scss";
 import Equipment from "../../Equipment";
