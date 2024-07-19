@@ -1,0 +1,24 @@
+.aboutContainer {
+  max-width: 1023px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.875rem;
+  padding-right: 6.25rem;
+  padding-left: 6.25rem;
+  padding-bottom: 1.875rem;
+
+  article {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: "600px") {
+  .aboutContainer {
+    width: auto;
+    padding-right: 1.219rem;
+    padding-left: 1.219rem;
+    gap: 1.25rem;
+  }
+}

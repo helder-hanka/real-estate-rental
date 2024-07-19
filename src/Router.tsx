@@ -4,6 +4,7 @@ import Home from "../src/components/pages/Home";
 import About from "./components/pages/About";
 import ErrorPage from "./components/pages/ErrorPage";
 import Layout from "./Layout";
+import AccomodationSheet from "./components/pages/AccomodationSheet";
 
 const Router = createBrowserRouter([
   {
@@ -16,8 +17,12 @@ const Router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/about",
+        path: "/a-propos",
         element: <About />,
+      },
+      {
+        path: "/fiche-logement/:fiche_logementId",
+        element: <AccomodationSheet />,
       },
     ],
   },
