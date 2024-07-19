@@ -9,6 +9,7 @@ import Tag from "../../Tag";
 import Description from "../../Description";
 import Rating from "../../Rating";
 import Profile from "../../Profile";
+import Loader from "../../Loader";
 
 interface Dropdown {
   description: boolean;
@@ -49,7 +50,7 @@ const AccomodationSheet = () => {
     }));
   };
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <Loader />;
   if (error) return <div>Error: {error}</div>;
   if (!accomodationSheet) return <div>No property found.</div>;
   return (
