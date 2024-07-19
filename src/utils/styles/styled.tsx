@@ -65,7 +65,8 @@ const styledSpan = styled.span`
 `;
 
 const StyledSection = styled.section`
-  margin: 50px 100px 43px 100px;
+  max-width: 1240px;
+  margin: 50px auto;
   background-color: black;
   height: 223px;
   border-radius: 25px;
@@ -122,6 +123,7 @@ const StyledFigure = styled.figure`
     left: 20px;
     color: ${colors.white};
     font-weight: 700;
+    font-size: 18px;
   }
   @media (max-width: ${size.mobile}) {
     width: 335px;
@@ -132,15 +134,15 @@ const StyledFigure = styled.figure`
 const StyledArticle = styled.article`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 60px 0;
-  margin: 50px 100px 43px 100px;
+  justify-content: center;
+  gap: 50px 60px;
+  max-width: 1240px;
+  margin: 43px auto;
   padding-top: 56px;
   padding-bottom: 43px;
   background-color: #f6f6f6;
   border-radius: 25px;
   @media (max-width: ${size.mobile}) {
-    margin: 27px 20px 0 20px;
     gap: 20px;
     padding-top: 0;
     padding-bottom: 27px;

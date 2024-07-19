@@ -4,8 +4,10 @@ $whiteColor: white;
 $grayColor: #f6f6f673;
 
 .accomodationSheetContainer {
-  margin: 50px 100px 43px 100px;
-
+  max-width: 1240px;
+  padding-top: 45px;
+  margin: auto;
+  padding-bottom: 50px;
   .articleAccomodation {
     .articleContainerOne {
       display: flex;
@@ -152,8 +154,7 @@ $grayColor: #f6f6f673;
 
 @media screen and (max-width: $sizeMobile) {
   .accomodationSheetContainer {
-    margin: 27px 20px 27px 20px;
-
+    padding: 27px 20px 27px 20px;
     .articleAccomodation {
       .articleContainerOne {
         flex-direction: column;
