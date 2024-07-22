@@ -50,9 +50,19 @@ const AccomodationSheet = () => {
     }));
   };
 
+  const errorPage = () => {
+    return (
+      <section className="ErrorPageContainer">
+        <span className="ErrorPage">
+          {error ? `Error: ${error}` : "No property found."}
+        </span>
+      </section>
+    );
+  };
+
   if (isLoading) return <Loader />;
-  if (error) return <div>Error: {error}</div>;
-  if (!accomodationSheet) return <div>No property found.</div>;
+  if (error) return errorPage();
+  if (!accomodationSheet) return errorPage();
   return (
     <section className="accomodationSheetContainer">
       <Carousel

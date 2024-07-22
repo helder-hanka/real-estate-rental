@@ -117,6 +117,19 @@ $grayColor: #f6f6f673;
   }
 }
 
+// Error Page
+.ErrorPageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  .ErrorPage {
+    text-align: center;
+    color: $RedColor;
+    font-size: 40px;
+  }
+}
+
 @keyframes rotate-down {
   from {
     transform: rotate(0deg);
@@ -204,5 +217,12 @@ $grayColor: #f6f6f673;
 
   .btnDropdownContainer {
     width: 100%;
+  }
+
+  // Error Page
+  .ErrorPageContainer {
+    .ErrorPage {
+      font-size: 16px;
+    }
   }
 }
