@@ -15,6 +15,7 @@ const StyldeLink = styled(NavLink)`
 `;
 
 const StyledFooter = styled.footer`
+  margin-top: auto;
   background-color: ${colors.black};
   color: ${colors.white};
   text-align: center;
