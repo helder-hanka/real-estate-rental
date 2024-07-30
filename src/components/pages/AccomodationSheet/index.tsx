@@ -53,6 +53,7 @@ const AccomodationSheet = () => {
   const errorPage = () => {
     return (
       <section className="ErrorPageContainer">
+        <h1>404</h1>
         <span className="ErrorPage">
           {error ? `Error: ${error}` : "No property found."}
         </span>

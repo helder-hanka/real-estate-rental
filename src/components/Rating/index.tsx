@@ -8,6 +8,7 @@ const Rating: React.FC<Props> = ({ rating }) => {
   const [matches, setMatch] = useState<boolean>(
     window.matchMedia("(max-width:600px)").matches
   );
+
   useEffect(() => {
     const mediaQueryList = window.matchMedia("(max-width:600px)");
     const listener = (e: MediaQueryListEvent) => setMatch(e.matches);
@@ -38,11 +39,11 @@ const Rating: React.FC<Props> = ({ rating }) => {
     <StarRating
       width={matches ? "98px" : "196px"}
       height={matches ? "18px" : "36px"}
-      fillOne={countRating(rating)[0]}
-      fillTwo={countRating(rating)[1]}
+      fillOne={countRating(rating)[4]}
+      fillTwo={countRating(rating)[3]}
       fillThree={countRating(rating)[2]}
-      fillFour={countRating(rating)[3]}
-      fillFive={countRating(rating)[4]}
+      fillFour={countRating(rating)[1]}
+      fillFive={countRating(rating)[0]}
     />
   );
 };
