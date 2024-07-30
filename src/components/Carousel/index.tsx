@@ -24,6 +24,9 @@ const Carousel: React.FC<Item> = ({ items, title }) => {
     );
   };
 
+  const isTagsDisplay = () => {
+    return items.length <= 1 && "displayBtbn";
+  };
   return (
     <figure className="carousel">
       <div className="carousel__items">
@@ -37,12 +40,12 @@ const Carousel: React.FC<Item> = ({ items, title }) => {
           </Fragment>
         ))}
       </div>
-      <figcaption className="carousel-item__caption">
+      <figcaption className={`carousel-item__caption ${isTagsDisplay()}`}>
         {currentIndex + 1}/{items.length}
       </figcaption>
       <button
         onClick={nextSlide}
-        className="carousel__button carousel__button--left"
+        className={`carousel__button carousel__button--left ${isTagsDisplay()}`}
       >
         <ArrowPrev
           width={match ? "11.67px" : "46.68px"}
@@ -51,7 +54,7 @@ const Carousel: React.FC<Item> = ({ items, title }) => {
       </button>
       <button
         onClick={prevSlide}
-        className="carousel__button carousel__button--right"
+        className={`carousel__button carousel__button--right ${isTagsDisplay()}`}
       >
         <ArrowNext
           width={match ? "11.67px" : "46.68px"}
