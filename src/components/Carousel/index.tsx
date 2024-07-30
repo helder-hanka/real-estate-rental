@@ -15,13 +15,16 @@ const Carousel: React.FC<Item> = ({ items, title }) => {
   const match = useMediaquery("(max-width:600px)");
 
   const prevSlide = () => {
-    const newIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1;
-    setCurrentIndex(newIndex);
+    setCurrentIndex((prevI) => (prevI === items.length - 1 ? 0 : prevI + 1));
   };
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? items.length - 1 : prevIndex - 1
     );
+  };
+
+  const isTagsDisplay = () => {
+    return items.length <= 1 && "displayBtbn";
   };
 
   return (
@@ -37,12 +40,12 @@ const Carousel: React.FC<Item> = ({ items, title }) => {
           </Fragment>
         ))}
       </div>
-      <figcaption className="carousel-item__caption">
+      <figcaption className={`carousel-item__caption ${isTagsDisplay()}`}>
         {currentIndex + 1}/{items.length}
       </figcaption>
       <button
         onClick={nextSlide}
-        className="carousel__button carousel__button--left"
+        className={`carousel__button carousel__button--left ${isTagsDisplay()}`}
       >
         <ArrowPrev
           width={match ? "11.67px" : "46.68px"}
@@ -51,7 +54,7 @@ const Carousel: React.FC<Item> = ({ items, title }) => {
       </button>
       <button
         onClick={prevSlide}
-        className="carousel__button carousel__button--right"
+        className={`carousel__button carousel__button--right ${isTagsDisplay()}`}
       >
         <ArrowNext
           width={match ? "11.67px" : "46.68px"}
