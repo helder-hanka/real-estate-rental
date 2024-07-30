@@ -15,8 +15,7 @@ const Carousel: React.FC<Item> = ({ items, title }) => {
   const match = useMediaquery("(max-width:600px)");
 
   const prevSlide = () => {
-    const newIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1;
-    setCurrentIndex(newIndex);
+    setCurrentIndex((prevI) => (prevI === items.length - 1 ? 0 : prevI + 1));
   };
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
@@ -27,6 +26,7 @@ const Carousel: React.FC<Item> = ({ items, title }) => {
   const isTagsDisplay = () => {
     return items.length <= 1 && "displayBtbn";
   };
+
   return (
     <figure className="carousel">
       <div className="carousel__items">
